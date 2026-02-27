@@ -1,9 +1,10 @@
 ﻿open System
 let rec StrSum () =
     let input = Console.ReadLine()
-    if input = ""
-    then 0
-    else input.Length + StrSum()
+    if input = "" then 
+        0
+    else 
+        input.Length + StrSum()
 
 [<EntryPoint>]
 let main args = 
