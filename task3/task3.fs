@@ -13,8 +13,10 @@ let Div (a, b) (c, d) =
         ((a * c + b * d) / denom, (b * c - a * d) / denom)
 
 let rec Pow (a, b) n =
-    if n <= 0 then (1.0, 0.0)
-    else Mul (a, b) (Pow (a, b) (n - 1))
+    if n <= 0 then 
+        (1.0, 0.0)
+    else 
+        Mul (a, b) (Pow (a, b) (n - 1))
 
 let readComplex msg =
     printfn "Введите %s (Re, затем Im):" msg
